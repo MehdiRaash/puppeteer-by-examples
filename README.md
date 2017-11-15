@@ -1,6 +1,6 @@
-# This repository teaches you step by step how to use puppeteer.
+## This repository teaches you step by step how to use puppeteer.
 
-## example 1: opening a web site and saving a screenshot as example.png
+ **example 1** -  opening a web site and saving a screenshot as example.png
 
 ```js
 const puppeteer = require('puppeteer');
