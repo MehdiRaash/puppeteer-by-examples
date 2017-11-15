@@ -14,6 +14,8 @@ const puppeteer = require('puppeteer');
   await browser.close();
 })();
 ```
+Puppeteer sets an initial page size to 800px x 600px, which defines the screenshot size. The page size can be customized  with [`Page.setViewport()`](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#pagesetviewportviewport).
+
 **example 2** - create a PDF.
 
 ```js
