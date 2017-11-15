@@ -17,7 +17,7 @@ const puppeteer = require('puppeteer');
 ```
 Puppeteer sets an initial page size to 800px x 600px, which defines the screenshot size. The page size can be customized  with [`Page.setViewport()`](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#pagesetviewportviewport).
 
-**example 3** - create a PDF.
+**example 2** - create a PDF.
 
 ```js
 const puppeteer = require('puppeteer');
@@ -47,3 +47,18 @@ const puppeteer = require('puppeteer');
 })();
 ```
 
+**example 4** -  open chromium as a non-headless mode browser and devtools(inspect) opened
+
+```js
+const puppeteer = require('puppeteer');
+
+(async () => {
+  const browser = await puppeteer.launch({
+    headless: false, devtools: true, args: ['--disable-infobars']
+  });
+  const page = await browser.newPage(); 
+  await page.goto('https://example.com');
+  //...
+})();
+```
+ 
